@@ -32,6 +32,8 @@ body {
 main {
     width: calc(100vw - 1.6rem);
     height: calc(100vh - 2.8rem);
+    max-height: 620px;
+    max-width: 343px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -57,12 +59,17 @@ main {
 
     img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center;
     }
 }
 
 .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     height: 60%;
     padding: 1.2rem;
     overflow-y: auto;
@@ -116,15 +123,16 @@ button {
     border-radius: 8px;
     background-color: $colorAccent;
     color: #fff;
-    min-width: 236px;
-    width: 100%;
+    min-width: 100%;
     min-height: 48px;
     font-weight: 700;
     font-size: .7rem;
     cursor: pointer;
     transition: background-color .3s ease;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
         background-color: $colorAccent2;
     }
 
@@ -165,10 +173,6 @@ button {
         }
     }
     .col-2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
         padding: 1.6rem;
     }
 }

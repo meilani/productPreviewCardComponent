@@ -24,6 +24,8 @@ body {
 main {
   width: calc(100vw - 1.6rem);
   height: calc(100vh - 2.8rem);
+  max-height: 620px;
+  max-width: 343px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -48,6 +50,7 @@ main {
 }
 .col-1 img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -55,6 +58,10 @@ main {
 }
 
 .col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 60%;
   padding: 1.2rem;
   overflow-y: auto;
@@ -108,15 +115,14 @@ button {
   border-radius: 8px;
   background-color: hsl(157deg, 36%, 37%);
   color: #fff;
-  min-width: 236px;
-  width: 100%;
+  min-width: 100%;
   min-height: 48px;
   font-weight: 700;
   font-size: 0.7rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-button:hover {
+button:hover, button:focus, button:active {
   background-color: hsl(157deg, 43%, 18%);
 }
 button span {
@@ -152,10 +158,6 @@ button span::before {
     height: 100%;
   }
   .col-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 1.6rem;
   }
 }/*# sourceMappingURL=style.css.map */
